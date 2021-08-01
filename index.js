@@ -12,14 +12,14 @@ refs = {
 // ======================== вариант 2 ======================== //
 
 const switchColors = {
-  isActive: false,
+  // isActive: false,
   timerId: null,
   start() {
-    if (this.isActive) {
-      // console.log(this.isActive);
-      return;
-    }
-    this.isActive = true;
+    // if (this.isActive) {
+    //   return;
+    // }
+    // this.isActive = true;
+    refs.btnStart.disabled = true;
     this.timerId = setInterval(() => {
       let i = randomIntegerFromInterval(0, colors.length);
       refs.body.style.backgroundColor = colors[i];
@@ -28,8 +28,8 @@ const switchColors = {
   },
   stop() {
     clearInterval(this.timerId);
-    this.isActive = false;
-    // console.log(this.isActive);
+    // this.isActive = false;
+    refs.btnStart.disabled = false;
   },
 };
 
