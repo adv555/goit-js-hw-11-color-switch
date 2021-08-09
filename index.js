@@ -16,6 +16,7 @@ const switchColors = {
   timerId: null,
   start() {
     // if (this.isActive) {
+    //   // console.log(this.isActive);
     //   return;
     // }
     // this.isActive = true;
@@ -30,6 +31,7 @@ const switchColors = {
     clearInterval(this.timerId);
     // this.isActive = false;
     refs.btnStart.disabled = false;
+    // console.log(this.isActive);
   },
 };
 
